@@ -1,0 +1,268 @@
+/* cała strona */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* górny blok - nagłówek, nawigacja strony */
+#top {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(37, 40, 49);
+    display: flex;
+    align-items: center;
+}
+
+#top img {
+    height: 80%;
+    margin-right: 20px;
+}
+
+.menu-nawigacja {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: end;
+    margin-right: 2vw;
+}
+
+.menu-nawigacja a {
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: normal;
+    padding: 10px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.menu-nawigacja a i {
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.menu-nawigacja a::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 24px;
+    background-color: yellow;
+}
+
+.menu-nawigacja a:last-child::after {
+    display: none;
+}
+
+.menu-nawigacja a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    flex-grow: 1;
+    justify-content: end;
+}
+
+.navbar-toggler i {
+    margin-right: 15px;
+}
+
+/* nawigacja dla telefonów 768px min*/
+@media (max-width: 768px) {
+    /* górny blok, nawigacja */
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .menu-nawigacja {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        background-color: rgb(37, 40, 49);
+        z-index: 10; /* Wysoki index warstwy, aby być na wierzchu */
+    }
+
+    .menu-nawigacja.show {
+        display: flex;
+    }
+
+    .menu-nawigacja a {
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: normal;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .menu-nawigacja a::after {
+        display: none;
+    }
+}
+
+/* środkowy blok */
+main {
+    text-align: center;
+    color: black;
+    background-image: url(img/pexels-pixabay-274895.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
+    flex: 1; /* Dodane, aby zajmowało pozostałą przestrzeń */
+}
+
+
+
+/* styl dla boksów */
+
+.box {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 25px black;
+    border-radius: 5%;
+    flex: 1 1 calc(33.333% - 40px); /* three boxes with spacing */
+    max-width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    min-height: 600px;
+    max-height: 600px; /* Minimalna wysokość */
+    text-decoration: none;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px 5px grey; 
+    transition: 0.3s ease-in-out;
+}
+
+.box:active h2{
+    display: none;
+}
+
+/* zawartosc boxa po kliknieciu */
+.box-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.box.show-content .box-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.box h2 {
+    position: relative;
+    z-index: 1;
+}
+
+#o_firmie {
+    background-image: url(img/pexels-emmages-8005398.jpg);
+}
+
+#oferta {
+    background-image: url(img/pexels-kseniachernaya-5691589.jpg);
+}
+
+#kontakt {
+    background-image: url(img/pexels-scottwebb-430208.jpg);
+}
+
+@media (max-width: 1024px) {
+    .box {
+        flex: 1 1 calc(50% - 40px); /* two boxes per row on tablet */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 100%; /* one box per row on mobile */
+        max-width: 100%;
+    }
+}
+
+/* styl dla stopki */
+#footer {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(37, 40, 49);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: auto; /* Dodane, aby wypchnąć stopkę na dół */
+}
+
+#telefon {
+    position: relative;
+    padding-left: 20px;
+}
+
+#telefon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: yellow;
+}
+
+#footer p {
+    margin-left: 1vw;
+    font-size: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin-right: 1vw;
+}
+
+footer i {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+/* przesunięcie logo na górze żeby nie stykało się ze stroną */
+#img-logo {
+    margin-left: 3vw;
+}
+
+.yellow {
+    color: yellow;
+}
