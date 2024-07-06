@@ -11,5 +11,15 @@ function toggleMenu() {
 }
 
 function toggleBox(element) {
+    const boxes = document.querySelectorAll('.box');
+
+    // Hide other boxes
+    boxes.forEach(box => {
+        if (box !== element) {
+            box.classList.remove('show-content');
+        }
+    });
+
+    // Toggle the visibility of the current box
     element.classList.toggle('show-content');
 }

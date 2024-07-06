@@ -15,16 +15,63 @@ html, body {
     background-color: rgb(37, 40, 49);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-#top img {
-    height: 80%;
-    margin-right: 20px;
+/* logo na górze */
+#logo-link {
+    height: 100%; /* Zapewnia, że kontener linku ma odpowiednią wysokość */
+    display: flex; /* Ustawienie flexbox na kontenerze, aby wyrównać obraz */
+    align-items: center; /* Wyrównanie obrazka do środka pionowo */
 }
 
+#img-logo {
+    margin-left: 3vw;
+    height: 80%; /* Zapewnia, że obraz ma odpowiednią wysokość */
+}
+
+#social-media-g {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-inline-end: auto;
+    padding-left: 10px;
+}
+
+#social-media-g i{
+    font-size: 30px;
+    text-decoration: none;
+    color: #D9B217;
+}
+
+@media (max-width: 1080px) {
+    #social-media-g {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 0;
+        margin-inline-end: unset;
+    }
+}
+
+@media(max-height: 1000px) {
+    #social-media-g i {
+        font-size: 25px;
+    } 
+}
+@media (max-height: 864px) {
+    #social-media-g {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 0;
+    }
+}
+
+.navm {
+    display: flex;
+}
 .menu-nawigacja {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex-grow: 1;
     justify-content: end;
     margin-right: 2vw;
@@ -36,12 +83,12 @@ html, body {
     font-size: xx-large;
     font-weight: normal;
     padding: 10px;
-    margin-right: 30px;
+    margin-right: 15px;
     position: relative;
 }
 
 .menu-nawigacja a i {
-    margin-right: 15px;
+    margin-right: 10px;
     font-size: 25px;
 }
 
@@ -70,7 +117,7 @@ html, body {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
     flex-grow: 1;
     justify-content: end;
@@ -80,8 +127,9 @@ html, body {
     margin-right: 15px;
 }
 
+
 /* nawigacja dla telefonów 768px min*/
-@media (max-width: 768px) {
+@media (max-width: 1365px) {
     /* górny blok, nawigacja */
     .navbar-toggler {
         display: flex;
@@ -156,13 +204,11 @@ main {
 }
 
 .box:hover {
-    box-shadow: 0 0 20px 5px grey; 
+    box-shadow: 0 0 50px 20px grey; 
     transition: 0.3s ease-in-out;
 }
 
-.box:active h2{
-    display: none;
-}
+
 
 /* zawartosc boxa po kliknieciu */
 .box-content {
@@ -171,14 +217,24 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    text-align: justify;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    font-size: 1.5em;
     background-color: rgba(255, 255, 255, 0.9);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    padding: 100px;
+}
+
+
+/* Style lists inside box content */
+.box-content ul {
+    padding-left: 20px; /* Add padding for list */
+    margin: 0;
+    list-style-type: disc;
 }
 
 .box.show-content .box-content {
@@ -186,9 +242,19 @@ main {
     visibility: visible;
 }
 
+/* Ensure h2 is centered and appears above the content */
 .box h2 {
     position: relative;
-    z-index: 1;
+    z-index: 2; 
+    font-size: 60px;
+    text-shadow: 5px 5px 10px yellow;
+    color: yellow;
+    transition: opacity 0.5s ease; 
+}
+
+/* Hide h2 when content is shown */
+.box.show-content h2 {
+    opacity: 0; /* Make h2 invisible */
 }
 
 #o_firmie {
@@ -218,7 +284,7 @@ main {
 }
 
 /* styl dla stopki */
-#footer {
+footer {
     width: 100%;
     height: 10vh;
     background-color: rgb(37, 40, 49);
@@ -227,14 +293,17 @@ main {
     align-items: center;
     color: white;
     margin-top: auto; /* Dodane, aby wypchnąć stopkę na dół */
+    flex-wrap: wrap;
 }
 
-#telefon {
+
+.kreska {
     position: relative;
-    padding-left: 20px;
+    padding-left: 15px;
+    margin-right: 3vw;
 }
 
-#telefon::after {
+.kreska::after {
     content: '';
     position: absolute;
     left: 0;
@@ -244,9 +313,9 @@ main {
     background-color: yellow;
 }
 
-#footer p {
-    margin-left: 1vw;
-    font-size: normal;
+footer p {
+    margin-left: 3vw;
+    font-size: 16px; /* Maintain font size */
     font-weight: normal;
     text-decoration: none;
     margin-right: 1vw;
@@ -258,11 +327,55 @@ footer i {
     color: white;
     margin-right: 15px;
 }
-/* przesunięcie logo na górze żeby nie stykało się ze stroną */
-#img-logo {
-    margin-left: 3vw;
+
+#social-media-d {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+#social-media-d i {
+    color: yellow;
+}
+
+footer #wa {
+    margin-left: 0;
 }
 
 .yellow {
     color: yellow;
+}
+
+
+@media (max-width: 1024px) {
+    footer {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    
+    .kreska {
+        margin-left: 15px;
+    }
+    
+    footer p {
+        font-size: 16px; /* Maintain font size */
+        margin: 5px 0; /* Adjust margins for better spacing */
+        margin-left: 15px;
+    }
+    
+    footer #wa {
+        margin-left: 0;
+    }
+    
+    footer i {
+        font-size: 40px;
+        margin-right: 10px; /* Adjust margin for better spacing */
+    }
 }
