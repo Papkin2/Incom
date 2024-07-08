@@ -51,7 +51,7 @@ html, body {
 
 @media (max-width: 768px) {
     #social-media-g i:hover{
-        transform: none;
+        transform: scale(1);
     }
 }
 
@@ -326,7 +326,7 @@ main {
 
 @media (max-width: 768px) {
     .text-box h2:hover{
-        transform: none;
+        transform: scale(1);
     }
 }
 
@@ -446,7 +446,7 @@ footer i {
 
 @media (max-width: 768px) {
     #social-media-d i:hover{
-        transform: none;
+        transform: scale(1);
     }
 }
 
