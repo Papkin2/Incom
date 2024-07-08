@@ -49,6 +49,12 @@ html, body {
     transform: scale(1.2);
 }
 
+@media (max-width: 768px) {
+    #social-media-g i:hover{
+        transform: none;
+    }
+}
+
 @media (max-width: 1080px) {
     #social-media-g {
         flex-direction: row;
@@ -318,6 +324,12 @@ main {
     transform: scale(1.2)
 }
 
+@media (max-width: 768px) {
+    .text-box h2:hover{
+        transform: none;
+    }
+}
+
 .text-box p, .text-box ul {
     color: #252831;
     font-size: 1.1em;
@@ -430,6 +442,12 @@ footer i {
 }
 #social-media-d i:hover{
     transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    #social-media-d i:hover{
+        transform: none;
+    }
 }
 
 footer #wa {
