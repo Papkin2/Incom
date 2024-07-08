@@ -1,0 +1,307 @@
+/* cała strona */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* górny blok - nagłówek, nawigacja strony */
+#top {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(37, 40, 49);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo na górze */
+#logo-link {
+    height: 100%; /* Zapewnia, że kontener linku ma odpowiednią wysokość */
+    display: flex; /* Ustawienie flexbox na kontenerze, aby wyrównać obraz */
+    align-items: center; /* Wyrównanie obrazka do środka pionowo */
+}
+
+#img-logo {
+    margin-left: 3vw;
+    height: 80%; /* Zapewnia, że obraz ma odpowiednią wysokość */
+}
+
+#social-media-g {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-inline-end: auto;
+    padding-left: 10px;
+}
+
+#social-media-g i{
+    font-size: 30px;
+    text-decoration: none;
+    color: #D9B217;
+}
+
+@media (max-width: 1080px) {
+    #social-media-g {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 0;
+        margin-inline-end: unset;
+    }
+}
+
+@media(max-height: 1000px) {
+    #social-media-g i {
+        font-size: 25px;
+    } 
+}
+@media (max-height: 864px) {
+    #social-media-g {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 0;
+    }
+}
+
+.navm {
+    display: flex;
+}
+.menu-nawigacja {
+    display: flex;
+    gap: 15px;
+    flex-grow: 1;
+    justify-content: end;
+    margin-right: 2vw;
+}
+
+.menu-nawigacja a {
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: normal;
+    padding: 10px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.menu-nawigacja a i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.menu-nawigacja a::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 24px;
+    background-color: yellow;
+}
+
+.menu-nawigacja a:last-child::after {
+    display: none;
+}
+
+.menu-nawigacja a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    flex-grow: 1;
+    justify-content: end;
+}
+
+.navbar-toggler i {
+    margin-right: 15px;
+}
+
+
+/* nawigacja dla telefonów 768px min*/
+@media (max-width: 1365px) {
+    /* górny blok, nawigacja */
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .menu-nawigacja {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        background-color: rgb(37, 40, 49);
+        z-index: 10; /* Wysoki index warstwy, aby być na wierzchu */
+    }
+
+    .menu-nawigacja.show {
+        display: flex;
+    }
+
+    .menu-nawigacja a {
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: normal;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .menu-nawigacja a::after {
+        display: none;
+    }
+}
+
+/* środkowy blok */
+main {
+    text-align: center;
+    color: black;
+    background-image: url(img/pexels-pixabay-274895.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
+    flex: 1; /* Dodane, aby zajmowało pozostałą przestrzeń */
+}
+/* galeria */
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: calc(250px * 6 + 80px);
+    margin: 0 auto;
+}
+
+
+.picture {
+    position: relative;
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+    align-items: middle;
+    border: 1px solid black;
+    box-shadow:1px 1px 40px 1px grey;
+    border-radius: 5%;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+/* styl dla stopki */
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(37, 40, 49);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: auto; /* Dodane, aby wypchnąć stopkę na dół */
+    flex-wrap: wrap;
+}
+
+
+.kreska {
+    position: relative;
+    padding-left: 15px;
+    margin-right: 3vw;
+}
+
+.kreska::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: yellow;
+}
+
+footer p {
+    margin-left: 3vw;
+    font-size: 16px; /* Maintain font size */
+    font-weight: normal;
+    text-decoration: none;
+    margin-right: 1vw;
+}
+
+footer i {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+
+#social-media-d {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+#social-media-d i {
+    color: yellow;
+}
+
+footer #wa {
+    margin-left: 0;
+}
+
+.yellow {
+    color: yellow;
+}
+
+
+@media (max-width: 1024px) {
+    footer {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    
+    .kreska {
+        margin-left: 15px;
+    }
+    
+    footer p {
+        font-size: 16px; /* Maintain font size */
+        margin: 5px 0; /* Adjust margins for better spacing */
+        margin-left: 15px;
+    }
+    
+    footer #wa {
+        margin-left: 0;
+    }
+    
+    footer i {
+        font-size: 40px;
+        margin-right: 10px; /* Adjust margin for better spacing */
+    }
+}
