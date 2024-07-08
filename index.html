@@ -1,103 +1,109 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Bartłomiej Chuchmacz">
-    <meta name="keywords" content="automatyka, automatyk, elektryk, elektryka, systemy bezpieczenstwa, krakow">
-    <title>Incom-Electronics</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/bd57a49512.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Bartłomiej Chuchmacz">
+<meta name="keywords" content="automatyka, automatyk, elektryk, elektryka, systemy bezpieczenstwa, krakow">
+<title>Incom-Electronics</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/bd57a49512.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </head>
 <body>
-    <header id="top">
-        <a href="index.html" id="logo-link"><img src="img/INCOM_logo.png" alt="logo firmy" id="img-logo"></a>
-        <div id="social-media-g">
-            <a href="https://www.facebook.com/profile.php?id=61557106346097" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="ig"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.link/fepivh" target="_blank" id="whatsapp-logo"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-        <div class="navm">
-        <nav class="menu-nawigacja" id="navbarMenu">
-            <a href="index.html"><i class="fa-solid fa-house"></i>Strona główna</a>
-            <a href="galery.html"><i class="fa-solid fa-bolt-lightning"></i>Galeria</i></a>
-            <a href="#kontakt"><i class="fa-solid fa-envelope"></i>Wyślij wiadomość</a>
-            <!-- <a href="tel:+48123456789"><span class="yellow">+48 123 456 789</span></a> -->
-        </nav>
-        <button class="navbar-toggler" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        </div>
-        
-    </header>    
-    <main>
-        <div class="box" id="oferta" onclick="toggleBox(this)">
-            <h2>O Firmie</h2>
-            <div class="box-content">
-                <p>Dlaczego my?
-                    Doświadczenie – Działamy na rynku od wielu lat, co pozwala nam na skuteczne i sprawdzone rozwiązania.
-                    Profesjonalizm – Nasz zespół składa się z wykwalifikowanych specjalistów, którzy stale podnoszą swoje kwalifikacje.
-                    Indywidualne podejście – Każdego klienta traktujemy indywidualnie, dostosowując ofertę do jego potrzeb.
-                    Innowacyjność – Korzystamy z najnowszych technologii, aby zapewnić naszym klientom nowoczesne i niezawodne systemy.
-                    Wsparcie – Zapewniamy pełne wsparcie techniczne oraz serwis gwarancyjny i pogwarancyjny.
-                    Zapraszamy do współpracy i kontaktu z nami. Zaufaj profesjonalistom, którzy zadbają o Twoje bezpieczeństwo i wygodę.</p>
-            </div>
-        </div>
+<header id="top">
+    <a href="index.html" id="logo-link"><img src="img/INCOM_logo.png" alt="logo firmy" id="img-logo"></a>
+    <div id="social-media-g">
+        <a href="https://www.facebook.com/profile.php?id=61557106346097" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="ig"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.link/fepivh" target="_blank" id="whatsapp-logo"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <div class="navm">
+    <nav class="menu-nawigacja" id="navbarMenu">
+        <a href="#kontakt"><div id="sent-msg"><i class="fa-solid fa-envelope"></i>Wyślij wiadomość</div></a>
+        <a href="galery.html"><i class="fa-solid fa-bolt-lightning"></i>Galeria</i></a>
+        <a href="index.html"><i class="fa-solid fa-house"></i>Strona główna</a>
+        <!-- <a href="tel:+48123456789"><span class="yellow">+48 123 456 789</span></a> -->
+    </nav>
+    <button class="navbar-toggler" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    </div>
+</header>    
+<main>
+    <div class="text-box" id="o-firmie">
+        <!-- <div class="close-button" >
+           <i class="fa-solid fa-arrow-left" onclick="toggleBackground(this)"></i>
+        </div> -->
+        <h2 onclick="toggleBackground(this)"><i class="fa-solid fa-arrow-right"></i> Dlaczego my? <i class="fa-solid fa-arrow-left"></i></h2>
+            <p>
+                <ul>
+            <li><span class="xd">Doświadczenie</span>  Działamy na rynku od wielu lat, co pozwala nam na skuteczne i sprawdzone rozwiązania.</li>
+            <li><span class="xd">Profesjonalizm</span> – Nasz zespół składa się z wykwalifikowanych specjalistów, którzy stale podnoszą swoje kwalifikacje.</li>
+            <li><span class="xd">Indywidualne podejście</span> – Każdego klienta traktujemy indywidualnie, dostosowując ofertę do jego potrzeb.</li>
+            <li><span class="xd">Innowacyjność</span> – Korzystamy z najnowszych technologii, aby zapewnić naszym klientom nowoczesne i niezawodne systemy.</li>
+        </ul>
+    </p>
+    </div>
 
-        <div class="box" id="o_firmie" onclick="toggleBox(this)">
-            <h2>Oferta</h2>
-            <div class="box-content">
-                <p><ul>
-                    <li>Automatyka:</li>
-                    <ul>
-                        Kompleksowe systemy automatyki budynkowej
-                        Inteligentne domy (smart home)
-                        Sterowanie oświetleniem, ogrzewaniem i innymi systemami
-                    </ul>
-                    <li>Elektryka:</li>
-                    <ul>
-                        Instalacje elektryczne
-                        Modernizacje i konserwacja istniejących instalacji
-                        Rozdzielnice elektryczne
-                    </ul>
-                    <li>Alarmy:</li>
-                    <ul>
-                        Systemy alarmowe
-                        Alarmy przeciwpożarowe
-                        Serwis i konserwacja systemów alarmowych
-                    </ul>
-                    <li>Monitoring:</li>
-                    <ul>
-                        Systemy monitoringu wizyjnego (CCTV)
-                        Instalacje kamer przemysłowych
-                        Zdalny monitoring i analiza obrazu
-                    </ul>
-                </ul>
-            </p>
-            </div>
-        </div>
-        <div class="box" id="kontakt" onclick="toggleBox(this)">
-            <h2>Kontakt</h2>
-            <div class="box-content">
-                <p>
-                    Adres e-mail: adres@poczta.fm<br><br>
-                    Telefon: +48 123 456 789
-                    <a href="mailto:someone@example.com">poczta</a>
-                </p>
-            </div>
-        </div>
-    </main>
-    <footer id="footer">
-        <p>Incom-Electronics &copy; 2024</p>
-        <div id="social-media-d">
-            <a href="https://www.facebook.com/profile.php?id=61557106346097" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="ig"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.link/fepivh" target="_blank" id="whatsapp-logo"><i class="fa-brands fa-whatsapp"></i></a>
-            <p id="wa">Napisz do mnie na WhatsAppie!</p>
-        </div>
-      
-        <p class="kreska">Telefon: <span class="yellow">+48 123 456 789</span>  <br>Poczta: <span class="yellow">michal08styczen@poczta.fm</span></p>
-    </footer>
+    <div class="text-box" id="oferta" >
+        <!-- <div class="close-button" onclick="toggleBackground(this)">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div> -->
+        <h2 onclick="toggleBackground(this)"><i class="fa-solid fa-arrow-right"></i> Oferta </span><i class="fa-solid fa-arrow-left"></i></h2>
+    <p>
+        <ul>
+        <li><span class="xd">Automatyka</span></li>
+        <ul>
+            Kompleksowe systemy automatyki budynkowej
+            Inteligentne domy (smart home)
+            Sterowanie oświetleniem, ogrzewaniem i innymi systemami
+        </ul>
+        <li><span class="xd">Elektryka</span></li>
+        <ul>
+            Instalacje elektryczne
+            Modernizacje i konserwacja istniejących instalacji
+            Rozdzielnice elektryczne
+        </ul>
+        <li><span class="xd">Alarmy</span></li>
+        <ul>
+            Systemy alarmowe
+            Alarmy przeciwpożarowe
+            Serwis i konserwacja systemów alarmowych
+        </ul>
+        <li><span class="xd">Monitoring</span></li>
+        <ul>
+            Systemy monitoringu wizyjnego (CCTV)
+            Instalacje kamer przemysłowych
+            Zdalny monitoring i analiza obrazu
+        </ul>
+    </ul></p>
+</div>
+<div class="text-box" id="kontakt">
+    <!-- <div class="close-button" onclick="toggleBackground(this)">
+        <i class="fa-solid fa-arrow-left"></i>
+    </div> -->
+    <h2 onclick="toggleBackground(this)"><i class="fa-solid fa-arrow-right"></i> Kontakt <i class="fa-solid fa-arrow-left"></i></h2>
+    <p>
+        <ul>
+            <li>Numer telefonu:&nbsp;&nbsp;&nbsp;<span class="xd">+48 123 456 789</span></li><br>
+            <li>Adres e-mail:&nbsp;&nbsp;&nbsp;<span class="xd">costam@poczta.fm</span></li><br><br><br><br>
+            <li><span class="xd"> Zapraszamy do współpracy i kontaktu z nami. Zaufaj profesjonalistom, którzy zadbają o Twoje bezpieczeństwo i wygodę.</span></li>
+        </ul>
+    </p>
+</div>
+</main>
+<footer id="footer">
+    <p>Incom-Electronics &copy; 2024</p>
+    <div id="social-media-d">
+        <a href="https://www.facebook.com/profile.php?id=61557106346097" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="ig"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.link/fepivh" target="_blank" id="whatsapp-logo"><i class="fa-brands fa-whatsapp"></i></a>
+        <p id="wa">Napisz do mnie na WhatsAppie!</p>
+    </div>
+  
+    <p class="kreska">Telefon: <span class="yellow" class="xd2">+48 123 456 789</span>  <br>Poczta: <span class="yellow" class="xd2">michal08styczen@poczta.fm</span></p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
