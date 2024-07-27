@@ -22,7 +22,8 @@
     <nav class="menu-nawigacja" id="navbarMenu">
         <a href="index.html"><i class="fa-solid fa-house"></i>Strona główna</a>
         <a href="galery.html"><i class="fa-solid fa-bolt-lightning"></i>Galeria</i></a>
-        <a href="#kontakt"><div id="sent-msg"><i class="fa-solid fa-envelope"></i>Wyślij wiadomość</div></a>
+        <!-- Wyślij wiadomość do zrobienia jak mi się będzie chciało -->
+        <!-- <a href="#kontakt"><div id="sent-msg"><i class="fa-solid fa-envelope"></i>Wyślij wiadomość</div></a> -->
         <!-- <a href="tel:+48123456789"><span class="yellow">+48 123 456 789</span></a> -->
     </nav>
     <button class="navbar-toggler" onclick="toggleMenu()">
@@ -31,8 +32,8 @@
     </div>
 </header>    
 <main>
-    <div class="text-box" id="o-firmie">
-        <h2 onclick="toggleBackground(this)"> O firmie </h2>
+    <div class="text-box" id="o-firmie" onclick="toggleBox(this)">
+        <h2 onclick="handleHeaderClick(event, this)"> O firmie </h2>
             <p>
                 <ul>
             <li><span class="xd">Doświadczenie</span>
@@ -55,8 +56,8 @@
     </p>
     </div>
 
-    <div class="text-box" id="oferta"  >
-        <h2 onclick="toggleBackground(this)"> Oferta </span></h2>
+    <div class="text-box" id="oferta" onclick="toggleBox(this)">
+        <h2 onclick="handleHeaderClick(event, this)"> Oferta </span></h2>
     <p>
         <ul>
         <li><span class="xd">Automatyka</span></li>
@@ -85,8 +86,8 @@
         </ul>
     </ul></p>
 </div>
-<div class="text-box" id="kontakt">
-    <h2 onclick="toggleBackground(this)"> Kontakt </h2>
+<div class="text-box" id="kontakt" onclick="toggleBox(this)">
+    <h2 onclick="handleHeaderClick(event, this)"> Kontakt </h2>
     <p>
         <ul>
             <li><b>Numer telefonu:</b><br>
